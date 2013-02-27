@@ -17,7 +17,7 @@ $(document).ready(function(){
 	//checkDevice();  // turn on for final
 	
 	// Check to see if Web App is saved to Homescreen
-	checkiPadStandAlone();
+	//checkiPadStandAlone();
 	
 	document.addEventListener('touchmove', function(e){ e.preventDefault(); }, false);
 
