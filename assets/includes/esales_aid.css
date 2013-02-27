@@ -3,6 +3,126 @@
 
 @charset "UTF-8";
 
+#trailerbackground, video, #holdseverything, #socialbuttons, .home_content img {
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+
+/*Gallery background*/
+#gallerystuff {
+	width: 1024px;
+	background: #282828;
+}
+
+
+/* HOMEPAGE */
+#homepagelandscape {
+	height: 618px;
+width: 1024px;
+background-image: url('../images/content/home.jpg');
+background-size: 1315px 628px;	
+background-position: -180px;
+}
+
+.page.portrait #homepagelandscape {
+	height: 874px;
+width: 768px;
+background-image: url('../images/content/homeportrait.jpg');
+background-size: 825px 914px;	
+background-position: -45px -40px;
+}
+
+
+
+/* VIDEO */
+video {
+-moz-box-shadow: 0px 0px 30px #FFF;
+  -webkit-box-shadow: 0px 0px 30px #FFF;
+  box-shadow: 0px 0px 30px #FFF;	
+}
+
+.page.landscape video {
+  margin-left: 111px;
+  margin-top: 140px;
+}
+.page.portrait video {
+  margin-left: 134px;
+  margin-top: 80px;
+}
+
+
+
+/* TRAILER IMG */
+#trailerbackground {
+background-image: url('../images/content/trailerbackground.jpg');
+background-repeat: no-repeat;
+background-size: 1145px 620px;
+}
+
+.page.landscape #trailerbackground {
+width: 1024px;
+height: 618px;
+background-position: 318px 0px;	
+}
+.page.portrait #trailerbackground {
+	width: 768px;
+height: 874px;
+background-position: -50px 255px;	
+}
+
+/* SOCIAL BUTTONS */
+#socialbuttons img {
+	width: 100px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	position: relative;
+}
+
+/*SOCIAL BACKGROUND */
+
+#holdseverything {
+	position: absolute;
+width: 1640px;
+height: 887px;
+background-image: url('../images/content/linksbg.jpg');
+background-repeat: no-repeat;
+background-size: 1640px 887px;
+}
+
+.page.landscape #holdseverything {
+background-position: -35px -183px;	
+}
+
+.page.portrait #holdseverything {
+background-position: -312px 0px;	
+}
+
+.page.landscape #socialbuttons {
+position: relative;
+top: 190px;
+left: 75px;
+display: inline;	
+}
+
+.page.portrait #socialbuttons {
+position: relative;
+top: 100px;
+left: 135px;
+}
+
+.page.landscape #socialbuttons img {
+display: inline;	
+}
+
+.page.portrait #socialbuttons img {
+display: block;	
+}
+
+
+
+
+
 /* Global Styles */
 body { margin: 0px;
 padding: 0px;
@@ -42,9 +162,30 @@ line-height: 1px;
 margin-top: 25px;
 }
 
+#gallerystuff img {
+		box-shadow: 0px 0px 50px 5px black;
+			-webkit-box-shadow: 0px 0px 50px 5px black;
+	-moz-box-shadow: 0px 0px 50px 5px black;
+}
+
 .home_content img {
-margin-left: 137px;
-	width: 748px;
+	width: 768px;
+	margin-top: -10px;
+}
+
+.home_content img:first-child {
+margin-top: 0px;	
+}
+.home_content img:last-child {
+	margin-bottom: -3px;
+}
+
+.page.portrait .home_content img {
+margin-left: 0px;	
+}
+
+.page.landscape .home_content img {
+margin-left: 127px;	
 }
 
 /* Global Layout */
@@ -89,7 +230,7 @@ font-size: 12px;
 }
 
 nav { position: absolute;
-bottom: 10px;
+bottom: 12px;
 left: 25px;
 font-family: 'frankenweeniemovieposterRg';
 font-size: 35px;
@@ -121,38 +262,9 @@ margin-top: 18px;
 margin-right: 25px;
 }
 
-.teapot_orange, .teapot_clay, .teapot_blue, .teapot_black, .map_container  { -webkit-transition: -webkit-transform 1s ease-in-out;
-}
 
-.teapot_orange { position: absolute;
--webkit-transform: translate3d(345px,1024px,0px);
-}
 
-.teapot_clay   { position: absolute;
--webkit-transform: translate3d(-250px,140px,0px);
-}
 
-.teapot_blue   { position: absolute;
--webkit-transform: translate3d(800px,-200px,0px);
-}
-
-.teapot_black  { position: absolute;
--webkit-transform: translate3d(1200px,258px,0px);
-}
-
-.gallery_container .thumbnail { float: left;
-margin: 0px 10px 10px 0px;
-display: inline-block;
-}
-
-.gallery_container .thumbnail img { border: 2px solid rgba(255,255,255,0);
-}
-
-.gallery_container .thumbnail img.selected { border-color: rgba(102,140,58,.4);
-}
-
-.gallery_container .thumbnails .caption_text { display: none;
-}
 
 .map_container { position: absolute;
 width: 300px;
@@ -174,7 +286,7 @@ height: 100%;
 }
 
 /* Page-specific Layout */
-.page.home article .content_container { background: url(../images/template/home_background.jpg) no-repeat 0px 0px;
+.page.home article .content_container { background: /*url(../images/template/home_background.jpg) no-repeat 0px 0px*/#000;
 background-size: 1024px 748px;
 background-position: 0px;
 }
@@ -224,38 +336,11 @@ height: 618px;
 }
 
 .page.landscape .video_graphic { position: absolute;
-right: 0px;
-top: 150px;
+left: 325px;
+top: 0px;
 }
 
-.page.landscape .gallery_container { width: 940px;
-position: relative;
-}
 
-.page.landscape .gallery_container .detail { width: 530px;
-margin: 0px 10px 0px 0px;
-border-right: 2px solid rgba(102,140,58,.4);
-float: left;
-}
-
-.page.landscape .gallery_container .detail img { width: 525px;
-height: 395px;
-}
-
-.page.landscape .gallery_container .thumbnails { width: 380px;
-float: left;
-}
-
-.page.landscape .gallery_container .thumbnails .thumbnail img { width: 110px;
-height: 83px;
-}
-
-.page.landscape .gallery_container .thumbnails .caption { width: 385px;
-height: 50px;
-position: absolute;
-bottom: 12px;
-right: 0px;
-}
 
 
 /* Orientation-specific Layout - Portrait */
@@ -281,61 +366,11 @@ height: 874px;
 }
 
 
-.page.portrait.home .teapot_orange { position: absolute;
--webkit-transform: translate3d(330px,535px,0px);
-}
 
-.page.portrait.home .teapot_clay   { position: absolute;
--webkit-transform: translate3d(125px,575px,0px);
-}
-
-.page.portrait.home .teapot_blue   { position: absolute;
--webkit-transform: translate3d(55px,635px,0px);
-}
-
-.page.portrait.home .teapot_black  { position: absolute;
--webkit-transform: translate3d(125px,730px,0px);
-}
 
 
 .page.portrait .home_content { width: 700px;
 }
-
-.page.portrait .video_graphic { position: absolute;
-right: 0px;
-top: 470px;
-}
-
-
-.page.portrait .gallery_container { height: 680px;
-position: relative;
-}
-
-.page.portrait .gallery_container .detail { margin: 0px 0px 5px 0px;
-border-bottom: 2px solid rgba(102,140,58,.4);
-}
-
-.page.portrait .gallery_container .detail img { width: 525px;
-height: 395px;
-margin: 0px 0px 0px 75px;
-}
-
-.page.portrait .gallery_container .thumbnails { margin-top: 85px;
-}
-
-.page.portrait .gallery_container .thumbnails .thumbnail img { width: 100px;
-height: 76px;
-}
-
-.page.portrait .gallery_container .thumbnails .caption { height: 50px;
-position: absolute;
-top: 410px;
-left: 0px;
-}
-
-
-
-
 
 
 
