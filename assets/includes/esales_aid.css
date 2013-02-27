@@ -16,6 +16,24 @@
 }
 
 
+/* HOMEPAGE */
+#homepagelandscape {
+	height: 618px;
+width: 1024px;
+background-image: url('../images/content/home.jpg');
+background-size: 1315px 628px;	
+background-position: -180px;
+}
+
+.page.portrait #homepagelandscape {
+	height: 874px;
+width: 768px;
+background-image: url('../images/content/homeportrait.jpg');
+background-size: 825px 914px;	
+background-position: -45px -40px;
+}
+
+
 
 /* VIDEO */
 video {
@@ -43,12 +61,12 @@ background-size: 1145px 620px;
 }
 
 .page.landscape #trailerbackground {
-width: 1145px;
-height: 620px;
+width: 1024px;
+height: 618px;
 background-position: 318px 0px;	
 }
 .page.portrait #trailerbackground {
-	width: 780px;
+	width: 768px;
 height: 874px;
 background-position: -50px 255px;	
 }
@@ -81,15 +99,21 @@ background-position: -312px 0px;
 }
 
 .page.landscape #socialbuttons {
-		position: relative;
+position: relative;
 top: 190px;
-left: 75px;	
+left: 75px;
+display: inline;	
 }
 
 .page.portrait #socialbuttons {
-		position: relative;
+position: relative;
 top: 100px;
-left: 135px;	
+left: 135px;
+display: block;
+}
+
+.page.landscape #socialbuttons img {
+display: inline;	
 }
 
 .page.portrait #socialbuttons img {
@@ -207,7 +231,7 @@ font-size: 12px;
 }
 
 nav { position: absolute;
-bottom: 10px;
+bottom: 12px;
 left: 25px;
 font-family: 'frankenweeniemovieposterRg';
 font-size: 35px;
